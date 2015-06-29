@@ -9,6 +9,10 @@
 
 > Mouse and touch events simulator
 
+[![sauce][sauce-image]][sauce-url]
+[sauce-image]: https://saucelabs.com/browser-matrix/oss-simulator.svg
+[sauce-url]: https://saucelabs.com/u/oss-simulator
+
 
 ## Install
 
