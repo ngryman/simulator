@@ -42,7 +42,9 @@
     "tappable",
     "touch"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "object-defaults": "^0.1.0"
+  },
   "devDependencies": {
     "browserify": "^10.2.4",
     "chai": "^3.0.0",
