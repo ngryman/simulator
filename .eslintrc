@@ -1,0 +1,8 @@
+{
+  "extends": "ngryman",
+
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "name": "simulator",
+  "version": "0.0.0",
+  "description": "Mouse and touch events simulator",
+  "author": "Nicolas Gryman <ngryman@gmail.com> (http://ngryman.sh)",
+  "license": "MIT",
+  "repository": "ngryman/simulator",
+  "main": "lib/index.js",
+  "browser": "dist/simulator.js",
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "scripts": {
+    "build": "browserify lib/index.js --no-bf --s Simulator -o dist/simulator.js",
+    "minify": "uglifyjs dist/simulator.js -cm > dist/simulator.min.js",
+    "dist": "npm run build && npm run minify",
+    "lint": "eslint lib/{,*/}*.js test/*.js",
+    "postinstall": "ln -nsf ../lib node_modules/simulator",
+    "prepublish": "npm run dist",
+    "test": "zuul test/*.js",
+    "watch": "npm test -- --local 1337"
+  },
+  "keywords": [
+    "doubletap",
+    "drag",
+    "emulate",
+    "emulation",
+    "emulator",
+    "event",
+    "flick",
+    "gestures",
+    "mobile",
+    "mouse",
+    "move",
+    "pointer",
+    "simulate",
+    "simulation",
+    "swipe",
+    "tablet",
+    "tap",
+    "tappable",
+    "touch"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "^10.2.4",
+    "chai": "^3.0.0",
+    "eslint": "^0.24.0",
+    "eslint-config-ngryman": "^0.2.0",
+    "sinon": "^1.15.3",
+    "sinon-chai": "^2.8.0",
+    "uglify-js": "^2.4.23",
+    "watchify": "^3.2.3",
+    "zuul": "ngryman/zuul#patch-1"
+  }
+}
