@@ -16,8 +16,8 @@
     "minify": "uglifyjs dist/simulator.js -cm > dist/simulator.min.js",
     "dist": "npm run build && npm run minify",
     "lint": "eslint lib/{,*/}*.js test/*.js",
-    "postinstall": "ln -nsf ../lib node_modules/simulator; mkdir -p dist",
-    "prepublish": "npm run dist",
+    "postinstall": "ln -nsf ../lib node_modules/simulator",
+    "prepublish": "mkdir -p dist; npm run dist",
     "test": "zuul test/*.js",
     "watch": "npm test -- --local 1337"
   },
