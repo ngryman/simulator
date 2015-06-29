@@ -1,6 +1,9 @@
 # gen
 dist
 
+# tools
+.zuulrc
+
 # node
 node_modules
 npm-debug.log
