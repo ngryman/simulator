@@ -44,12 +44,18 @@
     }
 
     return function(done) {
-      prepare()
+      before()
       fn(options, function() {
         asserts()
         after()
         done()
       })
     }
+  }
+
+  function flavours(tests) {
+    if ('Promise' in window)
+      context('with promise flavour', tests.bind(null, true))
+    context('with callback flavour', tests)
   }
 </script>
