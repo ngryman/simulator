@@ -1,6 +1,6 @@
 'use strict'
 
-var Simulator = require('simulator')
+require('./lib')
 
 describe('Device.trigger', function() {
   it('bubbles up', function() {

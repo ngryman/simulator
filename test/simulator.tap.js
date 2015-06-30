@@ -1,6 +1,7 @@
 'use strict'
 
-var Simulator = require('simulator')
+var flavours = require('./lib').flavours
+  , test = require('./lib').test
 
 describe('Simulator.tap', function() {
   flavours(function(usePromise) {
