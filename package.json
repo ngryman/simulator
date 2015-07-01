@@ -50,7 +50,7 @@
     "chai": "^3.0.0",
     "eslint": "^0.24.0",
     "eslint-config-ngryman": "^0.2.0",
-    "sinon": "ngryman/Sinon.JS#patch-1",
+    "sinon": "cjohansen/Sinon.JS",
     "sinon-chai": "^2.8.0",
     "uglify-js": "^2.4.23",
     "watchify": "^3.2.3",
