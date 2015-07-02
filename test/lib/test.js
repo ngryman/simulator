@@ -1,6 +1,6 @@
 'use strict'
 
-module.exports = function test(fn, asserts, options, callback) {
+module.exports = function test(fn, asserts, options) {
   function before() {
     var spies = 'down move up'.split(' ').reduce(function(res, type) {
       res[type] = sinon.spy()
@@ -8,7 +8,7 @@ module.exports = function test(fn, asserts, options, callback) {
     }, {})
 
     for (var k in spies) {
-      el.addEventListener('mouse' + k, spies[k])
+      el.addEventListener(test.device.eventsMap[k], spies[k])
     }
 
     var timers = {
@@ -23,7 +23,7 @@ module.exports = function test(fn, asserts, options, callback) {
     el = document.querySelector('#fixture')
   }
 
-  if (!callback) {
+  if (test.promise) {
     return function() {
       before()
       return fn(options).then(asserts).then(after)

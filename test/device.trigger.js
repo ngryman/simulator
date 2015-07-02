@@ -10,7 +10,7 @@ describe('Device.trigger', function() {
     document.body.addEventListener('mousedown', bodySpy)
     el.addEventListener('mousedown', elSpy)
 
-    Simulator.devices.touch.down()
+    Simulator.devices.mouse.down()
 
     expect(bodySpy).to.have.been.calledOn(document.body)
     expect(elSpy).to.have.been.calledOn(el)
@@ -24,7 +24,7 @@ describe('Device.trigger', function() {
     document.body.addEventListener('mousedown', bodySpy, true)
     el.addEventListener('mousedown', elSpy, true)
 
-    Simulator.devices.touch.down()
+    Simulator.devices.mouse.down()
 
     expect(bodySpy).to.have.been.calledOn(document.body)
     expect(elSpy).to.have.been.calledOn(el)

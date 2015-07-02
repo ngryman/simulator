@@ -1,7 +1,12 @@
 'use strict'
 
-module.exports = function flavours(tests) {
-  if ('Promise' in window)
-    context('with promise flavour', tests)
-  context('with callback flavour', tests.bind(null, true))
+var test = require('./test')
+
+module.exports = function flavours(callback) {
+  if ('Promise' in window) {
+    test.promise = true
+    context('with promise flavour', callback)
+  }
+  test.promise = false
+  context('with callback flavour', callback)
 }
