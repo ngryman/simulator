@@ -12,14 +12,16 @@
     "dist"
   ],
   "scripts": {
+    "lint": "eslint lib/{,*/}*.js test/*.js",
     "build": "browserify lib/index.js --no-bf --s Simulator -o dist/simulator.js",
     "minify": "uglifyjs dist/simulator.js -cm > dist/simulator.min.js",
-    "dist": "npm run build && npm run minify",
-    "lint": "eslint lib/{,*/}*.js test/*.js",
+    "spec": "zuul test/*.js",
+    "spec:local": "npm run spec -s -- --local 1337",
+    "test": "npm run lint -s; npm run test -s",
+    "watch": "onchange '{lib,test}/{,*/}*.js' -- npm run lint -s",
+    "dev": "parallelshell 'npm run watch -s' 'npm run spec:local -s'",
     "postinstall": "ln -nsf ../lib node_modules/simulator",
-    "prepublish": "mkdir -p dist; npm run dist",
-    "test": "zuul test/*.js",
-    "watch": "npm test -- --local 1337"
+    "prepublish": "mkdir -p dist && npm run build -s && npm run minify -s"
   },
   "keywords": [
     "doubletap",
@@ -50,6 +52,8 @@
     "chai": "^3.0.0",
     "eslint": "^0.24.0",
     "eslint-config-ngryman": "^0.2.0",
+    "onchange": "^1.1.0",
+    "parallelshell": "^1.2.0",
     "sinon": "cjohansen/Sinon.JS",
     "sinon-chai": "^2.8.0",
     "uglify-js": "^2.4.23",
