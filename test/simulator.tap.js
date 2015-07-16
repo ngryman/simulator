@@ -15,7 +15,8 @@ describe('Simulator.tap', function() {
         expect(spies.up).to.have.been.called.and.calledOn(el)
       }))
 
-      it('triggers ' + eventsMap.up + ' after ' + eventsMap.down, test(Simulator.tap, function(spies) {
+      it('triggers ' + eventsMap.up + ' after ' + eventsMap.down, test(Simulator.tap,
+      function(spies) {
         expect(spies.down).to.have.been.called.and.calledOn(el)
         expect(spies.up).to.have.been.called.and.calledOn(el)
         expect(spies.down).to.have.been.calledBefore(spies.up)

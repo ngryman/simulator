@@ -19,7 +19,8 @@ describe('Simulator.doubleTap', function() {
         expect(spies.up).to.have.been.calledTwice.and.calledOn(el)
       }))
 
-      it('interleaves ' + eventsMap.down + ' and ' + eventsMap.up, test(Simulator.doubleTap, function(spies) {
+      it('interleaves ' + eventsMap.down + ' and ' + eventsMap.up, test(Simulator.doubleTap,
+      function(spies) {
         expect(spies.down.args[0][0].timeStamp).to.be.at.most(spies.up.args[0][0].timeStamp)
         expect(spies.up.args[0][0].timeStamp).to.be.below(spies.down.args[1][0].timeStamp)
         expect(spies.down.args[1][0].timeStamp).to.be.at.most(spies.up.args[1][0].timeStamp)

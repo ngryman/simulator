@@ -23,7 +23,8 @@ describe('Simulator.swipe', function() {
         expect(spies.up).to.have.been.called.and.calledOn(el)
       }))
 
-      it('trigger ' + eventsMap.down + ', ' + eventsMap.move + ' then ' + eventsMap.up, test(Simulator.swipe, function(spies) {
+      it('trigger ' + eventsMap.down + ', ' + eventsMap.move + ' then ' + eventsMap.up,
+      test(Simulator.swipe, function(spies) {
         expect(spies.down).to.have.been.called.and.calledOn(el)
         expect(spies.move).to.have.been.called.and.calledOn(el)
         expect(spies.up).to.have.been.called.and.calledOn(el)

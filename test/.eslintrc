@@ -4,9 +4,12 @@
   },
 
   "globals": {
-    "expect": true,
-    "sinon": true,
+    "chai": true,
     "el": true,
-    "flavours": true
+    "expect": true,
+    "flavours": true,
+    "Simulator": true,
+    "sinon": true,
+    "sinonChai": true
   }
 }
