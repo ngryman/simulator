@@ -12,7 +12,7 @@
     "dist"
   ],
   "scripts": {
-    "lint": "eslint lib/**/*.js",
+    "lint": "eslint lib/{,*/}*.js",
     "build": "browserify lib/index.js --no-bf --s Simulator -o dist/simulator.js",
     "minify": "uglifyjs dist/simulator.js -cm > dist/simulator.min.js",
     "spec": "zuul test/*.js",
