@@ -17,7 +17,7 @@
     "minify": "uglifyjs dist/simulator.js -cm > dist/simulator.min.js",
     "spec": "zuul test/*.js",
     "spec:local": "npm run spec -s -- --local 1337",
-    "test": "npm run lint -s; npm run test -s",
+    "test": "npm run lint -s; npm run spec -s",
     "watch": "onchange '{lib,test}/{,*/}*.js' -- npm run lint -s",
     "dev": "parallelshell 'npm run watch -s' 'npm run spec:local -s'",
     "postinstall": "ln -nsf ../lib node_modules/simulator",
