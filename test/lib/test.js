@@ -23,12 +23,12 @@ module.exports = function test(fn, asserts, options, promise) {
     el = document.querySelector('#fixture')
   }
 
-  if (promise) {
-    return function() {
-      before()
-      return fn(options).then(asserts).then(after)
-    }
-  }
+  // if (promise) {
+  //   return function() {
+  //     before()
+  //     return fn(options).then(asserts).then(after)
+  //   }
+  // }
 
   return function(done) {
     before()
