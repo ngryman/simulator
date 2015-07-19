@@ -1,6 +1,6 @@
 'use strict'
 
-module.exports = function test(fn, asserts, options) {
+module.exports = function test(fn, asserts, options, promise) {
   function before() {
     var spies = 'down move up'.split(' ').reduce(function(res, type) {
       res[type] = sinon.spy()
@@ -23,7 +23,7 @@ module.exports = function test(fn, asserts, options) {
     el = document.querySelector('#fixture')
   }
 
-  if (test.promise) {
+  if (promise) {
     return function() {
       before()
       return fn(options).then(asserts).then(after)
