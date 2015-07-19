@@ -3,13 +3,13 @@ html: ./test/fixture.html
 browsers:
   - name: chrome
     version: 41..latest
-  - name: firefox
-    version: 36..latest
-  - name: safari
-    version: latest
-  - name: ie
-    version: 9..latest
-  - name: iphone
-    version: 6.0..latest
-  - name: android
-    version: 4.0..latest
+  # - name: firefox
+  #   version: 36..latest
+  # - name: safari
+  #   version: latest
+  # - name: ie
+  #   version: 9..latest
+  # - name: iphone
+  #   version: 6.0..latest
+  # - name: android
+  #   version: 4.0..latest
