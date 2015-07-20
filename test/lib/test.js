@@ -1,14 +1,16 @@
 'use strict'
 
-module.exports = function test(fn, asserts, options, callback) {
+module.exports = function test(fn, asserts, options, callback, name) {
   function before() {
     var spies = 'down move up'.split(' ').reduce(function(res, type) {
       res[type] = sinon.spy()
       return res
     }, {})
 
+    Simulator.device = name
+
     for (var k in spies) {
-      el.addEventListener('mouse' + k, spies[k])
+      el.addEventListener(Simulator.devices[name].events[k], spies[k])
     }
 
     var timers = {
