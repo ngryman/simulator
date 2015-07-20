@@ -1,6 +1,7 @@
 'use strict'
 
-var flavours = require('./lib').flavours
+var devices = require('./lib').devices
+  , flavours = require('./lib').flavours
   , test = require('./lib').test
 
 describe('Simulator.tap', function() {

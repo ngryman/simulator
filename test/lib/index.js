@@ -10,6 +10,7 @@ chai.use(sinonChai)
 window.el = document.querySelector('#fixture')
 
 module.exports = {
+  devices: require('./devices'),
   flavours: require('./flavours'),
   test: require('./test')
 }
