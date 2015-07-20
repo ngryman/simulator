@@ -3,7 +3,7 @@
 var flavours = require('./lib').flavours
   , test = require('./lib').test
 
-describe('Simulator.doubleTap', function() {
+xdescribe('Simulator.doubleTap', function() {
   before(function() {
     Simulator.doubleTapDuration = 25
   })

@@ -3,7 +3,7 @@
 var flavours = require('./lib').flavours
   , test = require('./lib').test
 
-describe('Simulator.press', function() {
+xdescribe('Simulator.press', function() {
   before(function() {
     Simulator.pressDuration = 25
   })

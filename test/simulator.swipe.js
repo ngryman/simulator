@@ -3,7 +3,7 @@
 var flavours = require('./lib').flavours
   , test = require('./lib').test
 
-describe('Simulator.swipe', function() {
+xdescribe('Simulator.swipe', function() {
   before(function() {
     Simulator.swipeDuration = 25
   })
