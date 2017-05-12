@@ -1,7 +1,5 @@
 # simulator [![npm][npm-image]][npm-url] [![size][size-image]][size-url] [![travis][travis-image]][travis-url]
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/ngryman/simulator.svg)](https://greenkeeper.io/)
-
 [npm-image]: https://img.shields.io/npm/v/simulator.svg?style=flat
 [npm-url]: https://npmjs.org/package/simulator
 [size-image]: https://img.shields.io/badge/size-1.3kb-brightgreen.svg?style=flat
