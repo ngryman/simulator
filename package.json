@@ -48,7 +48,7 @@
     "object-defaults": "^1.0.0"
   },
   "devDependencies": {
-    "browserify": "^14.3.0",
+    "browserify": "^14.4.0",
     "chai": "^3.0.0",
     "eslint": "^3.19.0",
     "eslint-config-ngryman": "^1.7.1",
