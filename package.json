@@ -53,7 +53,7 @@
     "eslint": "^3.19.0",
     "eslint-config-ngryman": "^1.7.1",
     "onchange": "^3.2.1",
-    "parallelshell": "^2.0.0",
+    "parallelshell": "^3.0.0",
     "sinon": "cjohansen/Sinon.JS",
     "sinon-chai": "^2.8.0",
     "uglify-js": "^3.0.3",
