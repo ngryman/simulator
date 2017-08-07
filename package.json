@@ -50,7 +50,7 @@
   "devDependencies": {
     "browserify": "^14.3.0",
     "chai": "^3.0.0",
-    "eslint": "^3.19.0",
+    "eslint": "^4.4.1",
     "eslint-config-ngryman": "^1.7.1",
     "onchange": "^3.2.1",
     "parallelshell": "^2.0.0",
